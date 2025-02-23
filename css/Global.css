@@ -5,13 +5,14 @@
 :root{
     --DarkBlue:#023047;
     --LightBlue:#677791;
-     --white:#fefefe;
+    --white:#fefefe;
     --gray:#7A7A7A ;
     --Runded:20px;
     --divWidth:1000px;
+    --mainfont:Roboto,sans-serif;
 
 }
-.Parent{
+.Parent1{
     position: relative;
     width: var(--divWidth);
     height: 70px;
@@ -44,9 +45,9 @@
 
 }
 a{
-     text-decoration: none;
-     color: var(--DarkBlue);
- }
+    text-decoration: none;
+    color: var(--DarkBlue);
+}
 .item2t{
     width: 55%;
 
@@ -56,7 +57,7 @@ a{
 }
 input{
     display: none;
-visibility: hidden;
+    visibility: hidden;
     -webkit-appearance: none;
 
 }
@@ -93,7 +94,7 @@ visibility: hidden;
     padding-left : 10px;
     font-size: 20px;
     color: var(--DarkBlue);
-padding-right: 8px;
+    padding-right: 8px;
     justify-content: end;
 }
 #menu-toggle:checked ~ .nav-links{
@@ -106,9 +107,9 @@ padding-right: 8px;
         width: 100%;
 
     }
-.item2{
-    display: none;
-}
+    .item2{
+        display: none;
+    }
     .item2t{
         display: flex;
     }
@@ -119,15 +120,15 @@ padding-right: 8px;
         width: 100%;
         height: 200px;
 
-         }
+    }
     .item1{
         width:30% ;
     }
-.item1 img{
-height: 100%;
-  width: 100%;
+    .item1 img{
+        height: 100%;
+        width: 100%;
 
-}
+    }
     .item2{
         display: none;
         visibility: hidden;

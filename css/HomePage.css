@@ -1,0 +1,17 @@
+.Parent2{
+    display: flex;
+justify-content: center;
+    width: var(--divWidth);
+    margin: auto;
+    gap: 16px;
+}
+.RightContent > div>img{width: 50px}
+.RightContent > div{
+    border: #7A7A7A solid 5px;
+}
+.LeftContent{
+   width: 80%;
+    text-align: left;
+
+}
+
