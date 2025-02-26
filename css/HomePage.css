@@ -1,17 +1,307 @@
 .Parent2{
     display: flex;
 justify-content: center;
-    width: var(--divWidth);
-    margin: auto;
-    gap: 16px;
+    width: 1140px;
+
+  margin:70px auto 0 auto;
+gap: 0px;
+
+
 }
-.RightContent > div>img{width: 50px}
-.RightContent > div{
-    border: #7A7A7A solid 5px;
+.RightContent{
+    width: 40%;
+    display: flex;
+
+    justify-content: end;
 }
+.RightContent>div > img {
+box-shadow: 0 3px 10px #5d5d5d;  ;
+
+    height: 500px;
+    border-radius:  2000px;
+position: relative;
+    border: 20px solid #f0f0f0;
+
+}
+.RightContent>div {
+    position: relative;
+}
+.IconDiv{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: var(--DarkBlue);
+    bottom: 30px;
+
+    color: white;
+    font-size: 30px;
+}
+
 .LeftContent{
-   width: 80%;
+   width: 65%;
     text-align: left;
 
 }
+.LeftContent h1{
+    color: var(--DarkBlue);
+    font-family: var(--mainfont);
+    margin-bottom: 10px;
+    font-size:64px;
 
+span{
+    color: var(--LightBlue);
+}
+}
+.DotAndLine {
+    display: flex;
+    gap: 10px;
+    height: 30px;
+
+    align-items: center;
+}
+ .Dot{
+    background-color: var(--LightBlue);
+border-radius: 50%;
+    width: 7px;
+    height: 7px;
+}
+.Line{
+    background-color: var(--LightBlue);
+    border-radius: 10px;
+    width: 100px;
+    height: 7px;
+
+
+}
+.UnderDotContent{
+    color: var(--gray);
+}
+.squares{
+    display: flex;
+    gap: 30px;
+    padding-left: 15px;
+
+
+}
+.square .num{
+
+    font:40px "poppins", sans-serif;
+    font-weight: bolder;
+    color: var(--LightBlue);
+    text-align: center;
+}
+.square .con{
+    font-family:"Roboto Slab",sans-serif ;
+    color: var(--gray);
+}
+.Parent3{
+   width: 1140px;
+    margin: 100px auto 0 auto; ;
+}
+.Parent3-son{
+
+    align-items: center;
+    display: flex;
+    width: 100%;
+
+    justify-content: center;
+    height: 240px;
+    border-radius: var(--Runded);
+    background-color: var(--LightBlue);
+
+
+}
+.Parent3-Square,.Parent3-Square-l{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    width: 23%;
+color: white;
+font-family: var(--mainfont);
+}
+.Parent3-Square-l{
+    background-color: var(--DarkBlue) !important;
+    height: 300px;
+    border-radius: var(--Runded);
+    box-shadow: 0 3px 5px black;
+
+}
+.Parent3-son i{
+    font-size: 40px;
+}
+.Parent4{
+    margin: 180px auto 200px auto;
+   width: 1140px;
+}
+.Parent4-son{
+    height: 640px;
+    display: flex;
+    width: 100%;
+
+    border-radius: var(--Runded);
+    align-items: center;
+}
+.Parent4-1 {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+height: 100%;
+
+}
+.Parent4-1 div{
+    height: 320px;
+
+    position: relative;
+
+}
+.Pic1{
+
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    border-radius:var(--Runded) 0 0 0 ;
+    position: relative;
+background-color: #677791;
+
+
+}
+.Pic1 img{
+    height: 100%;
+    width: 100%;
+    border-radius:  var(--Runded) 0 0 0;
+    object-fit: cover;
+    position: absolute;
+
+}
+.Pic1::before{
+     content: "";
+
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background-color: var(--DarkBlue);
+     z-index: 1;
+     border-radius:  var(--Runded) 0 0 0;
+     opacity: 0.7;
+ }
+.Pic1 div{
+    font-size: 20px;
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    color: white;
+    z-index: 9999;
+    width: 75px;
+    height:75px;
+    border-radius: 50%;
+    border: 3px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.play:hover{
+    background-color: white;
+    color: var(--DarkBlue);
+    transition: 0.45s;
+}
+.Pic2 {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: url("../img/image-2.jpg");
+    background-size: cover;
+    border-radius: 0 0 0 var(--Runded);
+}
+
+.Parent4-2{
+    width: 34%;
+    display: flex;
+    flex-direction: column;
+    padding:50px 50px ;
+    color: white;
+    font-family: var(--mainfont);
+    border-radius:  var(--Runded);
+    height:700px;
+    background-color: var(--LightBlue);
+    z-index: 1;
+}
+
+
+
+
+
+
+
+.Parent4-2 h1{
+    font-size: 50px;
+    margin-bottom: 0;
+}
+.Parent4-2 p{
+    line-height: 1.45;
+}
+.Parent4-2 button{
+    width: 180px;
+    height: 60px;
+    background-color: var(--DarkBlue);
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: var(--Runded);
+    margin-top: 15px;
+
+}
+.Parent4-3{
+     width: 40%;
+     box-shadow: 0 0 15px #adadad;
+     height: 100%;
+     border-radius: 0 var(--Runded) var(--Runded) 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+ }
+.IconLabel{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+}
+.IconLabel span{
+    height: 50px;
+    width: 50px;
+    background-color: var(--DarkBlue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius:15px;
+    color: white;
+    font-size: 20px;
+}
+.Parent4-3 div p{
+    color: var(--gray);
+
+}
+.DisPar{
+      padding-left:65px ;
+  }
+.Parent4-3 h2{
+    color: var(--DarkBlue);
+}
+.FooterHed{
+    display: flex;
+    background-color: #023047;
+}
+.FooterHed-Submit input{
+    width: 100%;
+    height: 30px;
+    background-color: #7A7A7A;
+    z-index: 3;
+}

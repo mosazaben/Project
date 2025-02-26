@@ -1,8 +1,10 @@
 body{
     margin:0;
+
 }
 *{
     box-sizing: border-box;
+    font-family: var(--mainfont);
 }
 :root{
     --DarkBlue:#023047;
@@ -10,23 +12,21 @@ body{
     --white:#fefefe;
     --gray:#7A7A7A ;
     --Runded:20px;
-    --divWidth:1000px;
+
     --mainfont:Roboto,sans-serif;
 
 }
 .Parent1{
 
-    width: 100vw;
+    width: 1145px;
     height: 70px;
-    /*margin:15px auto 0 auto;*/
+
     display: flex;
-    /*border-style: none none solid none;*/
-    /*border-width: 3px;*/
-    /*border-color: #d2d7db ;*/
+
     flex-wrap: wrap;
     align-items: center;
     color: var(--DarkBlue);
-padding: 0 10% ;
+margin: auto;
 
 
 
@@ -35,14 +35,14 @@ padding: 0 10% ;
 
 .BorderLine{
     height: 1px;
-    background-color: var(--DarkBlue);
-    margin: 0 10%;
+    background-color: var(--gray);
+    width: 1200px;
 }
 .item1 img{
     height:40px;
 }
 .item1{
-    padding-left: 15px;
+
     width: 25%;
     display: flex
 }
