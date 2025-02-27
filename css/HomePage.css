@@ -40,7 +40,6 @@ position: relative;
     color: white;
     font-size: 30px;
 }
-
 .LeftContent{
    width: 65%;
     text-align: left;
@@ -135,7 +134,7 @@ font-family: var(--mainfont);
     font-size: 40px;
 }
 .Parent4{
-    margin: 180px auto 200px auto;
+    margin: 180px auto 70px auto;
    width: 1140px;
 }
 .Parent4-son{
@@ -219,7 +218,6 @@ background-color: #677791;
     background-size: cover;
     border-radius: 0 0 0 var(--Runded);
 }
-
 .Parent4-2{
     width: 34%;
     display: flex;
@@ -232,13 +230,6 @@ background-color: #677791;
     background-color: var(--LightBlue);
     z-index: 1;
 }
-
-
-
-
-
-
-
 .Parent4-2 h1{
     font-size: 50px;
     margin-bottom: 0;
@@ -295,13 +286,264 @@ background-color: #677791;
 .Parent4-3 h2{
     color: var(--DarkBlue);
 }
-.FooterHed{
+.Parent5{
     display: flex;
-    background-color: #023047;
+    align-items: center;
+    justify-content: center;
+    width: 1140px;
+    margin: auto;
+    height: 280px;
+}
+.Partner-dis{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:first;
+    height: 130px;
+    width: 320px;
+    h2{
+        color: var(--DarkBlue);
+        margin-bottom: 0;
+    }
+    p{
+        color: var(--gray);
+        line-height: 1.45;
+    }
+}
+.Partner-Logo{
+    gap: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+   height: 130px;
+    width: 820px;
+}
+.P_logo1{
+    height: 40px;
+    width: 125px;
+    object-fit: cover;
+}
+.P_logo2{
+    width:153px;
+    height: 38px;
+
+}
+.P_logo3{
+    width: 155px;
+    height: 29px;
+}
+.Parent10{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 459px;
+    background-image:url("../img/cctv-security-camera-or-home-surveillance-cameras-2022-11-15-09-07-07-utc.jpg") ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+
+
+
+}
+.Parent10:after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--LightBlue);
+    opacity: 0.7;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.Footer{
+    width: 100vw;
+    background-image: url("../img/close-up-of-modern-video-monitoring-camera-on-whit-2023-01-13-02-51-56-utc.jpg");
+background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+
+}
+.FooterHed-container{
+    width: 100%;
+    background-color: var( --LightBlue);
+    height: 242px;
+    display: flex;
+
+
+
+
+}
+.FooterHed{
+    width: 1140px;
+    height: 100%;
+    display: flex;
+    margin: auto;
+    justify-content: left;
+    align-items: center;
+    color: white;
+
+
+
 }
 .FooterHed-Submit input{
-    width: 100%;
-    height: 30px;
-    background-color: #7A7A7A;
+    width: 362px;
+    height: 48px;
+    padding: 10px;
     z-index: 3;
+    outline: none;
+    border: 1px solid white;
+    border-radius:12px ;
+    background-color: var(--LightBlue);
+}
+.FooterHed-Submit input::placeholder{
+
+    color: white;
+}
+.FooterHed-Submit{
+    display: flex;
+    gap: 30px;
+    width: 60%;
+    justify-content: end;
+    align-items: center;
+
+}
+.FooterHed-Submit button{
+    width: 141px;
+    height: 48px;
+    border-radius: 12px;
+    border: none;
+    background-color: var(--DarkBlue);
+    color: white;
+
+    font-size: 15.5px;
+}
+.FooterHed-con h1{
+font-size: 40px;
+}
+.FooterContent-container{
+    width: 100%;
+    height: 420px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding-top: 60px;
+    padding-left: 15px;
+
+
+}
+.FooterContent-container::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--LightBlue);
+    opacity: 0.7;
+
+}
+.FooterContent{
+
+    width: 1140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   z-index: 1;
+margin-bottom: 30px;
+
+
+}
+.FooterContent_square1{
+    width: 431px;
+    height: 215px;
+    line-height: 1.45;
+    color: white;
+}
+.FooterContent_square1 img{
+    width: 211px;
+    height: 63px;
+}
+.FooterContent_square1-Icons{
+    display: flex;
+    gap: 5px;
+    font-size: 20px;
+}
+.FooterContent_square1-Icons div{
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: var(--DarkBlue);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.FooterContent_square2{
+    width: 238px;
+    height: 215px;
+    color:white;
+}
+.FooterContent_square2 h2,.FooterContent_square3 h2,.FooterContent_square4 h2{
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+.FooterContent_square2 div,.FooterContent_square3 div{
+    margin-top: 10px;
+}
+.FooterContent_square3{
+    width: 227px;
+    height: 215px;
+    color:white;
+
+}
+.FooterContent_square4{
+    width: 243px;
+    height: 215px;
+    color:white;
+    line-height: 1.45;
+}
+.FooterContent_square4 button{
+    width: 146px;
+    height: 56px;
+    border-radius: 10px;
+    color: white;
+    background-color: var(--DarkBlue);
+    border: none;
+    font-size: 15.5px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+}
+.Footer-Line{
+    width: 1140px;
+    height: 1px;
+    background-color: white;
+    z-index: 1;
+}
+.Footer-Under-Line{
+    width: 1140px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    z-index: 1;
+
 }
