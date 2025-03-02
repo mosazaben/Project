@@ -925,6 +925,27 @@ z-index: 9999;
     height: 638px;
 
 }
+.Parent11-son-content-card-photo{
+    width: 360px;
+    height: 460px;
+    position: relative;
+}
+.Parent11-son-content-card-photo-circle{
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: var(--LightBlue);
+    bottom: 20px;
+    left: 30px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+z-index: 3;
+
+}
 .Parent11-son-content-card-photo img{
     width: 360px;
     height: 460px;
@@ -940,10 +961,10 @@ z-index: 9999;
     color: var(--DarkBlue);
 
 }
-.Parent11-son-content-card h2{
+.Parent11-son-content-card > h2{
     color: var(--DarkBlue);
 }
-.Parent11-son-content-card p{
+.Parent11-son-content-card >p{
     color: var(--gray);
 }
 .Parent11-son-content-card button{
