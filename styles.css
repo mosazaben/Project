@@ -1,0 +1,588 @@
+/****************************************************/
+/*                1) المتغيرات + التهيئة           */
+/****************************************************/
+:root {
+  --DarkBlue: #023047;
+  --LightBlue: #677791;
+  --white: #fefefe;
+  --gray: #7A7A7A;
+  --Runded: 20px;
+  --divWidth: 1000px;
+}
+
+/* إعادة تعيين الأساسيات (Reset) */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/****************************************************/
+/*                  2) تنسيق عام للصفحة            */
+/****************************************************/
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  /* إن كنت تفضل لونًا آخر، عدّل هنا */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* بشكل افتراضي لون النص في بعض الأقسام أبيض، 
+     لذا إن كنت تريد لونًا غامقًا للجميع عدّل هنا */
+  color: var(--DarkBlue);
+}
+
+h1 {
+  font-size: 48px;
+  font-weight: bold;
+}
+
+p {
+  font-size: 18px;
+  color: #66707b; /* لون نص الفقرات */
+  max-width: 600px;
+  margin: 20px auto;
+  line-height: 1.6;
+}
+
+/****************************************************/
+/*            3) تنسيق الهيدر (القائمة العلوية)     */
+/****************************************************/
+.Parent {
+  position: relative;
+  width: var(--divWidth);
+  height: 70px;
+  margin: 15px auto 0 auto;
+  display: flex;
+  border-style: none none solid none;
+  border-width: 3px;
+  border-color: #d2d7db;
+  flex-wrap: wrap;
+  align-items: center;
+  color: var(--DarkBlue);
+}
+
+/* شعار (لوغو) */
+.item1 {
+  padding-left: 15px;
+  width: 25%;
+  display: flex;
+}
+.item1 img {
+  height: 40px;
+}
+
+/* القائمة الرئيسية في الوضع العادي (ديسكتوب) */
+.item2 {
+  width: 55%;
+  display: flex;
+  justify-content: end;
+  gap: 50px;
+  font-size: 20px;
+}
+/* تحويل الصيغة الشبيهة بالـ SCSS إلى CSS صريح */
+.item2 a {
+  text-decoration: none;
+  color: var(--DarkBlue);
+}
+
+/* القائمة الرئيسية في وضع التابلت (تظهر الأيقونة بدلًا منها) */
+.item2t {
+  width: 55%;
+  justify-content: end;
+  font-size: 30px;
+  display: none; /* مخفية افتراضيًا */
+}
+
+/* أيقونة التبديل (قائمة موبايل) */
+input#menu-toggle {
+  display: none;
+  visibility: hidden;
+  -webkit-appearance: none;
+}
+/* قائمة الروابط المنسدلة في الموبايل */
+.nav-links {
+  position: absolute;
+  top: 55px;
+  right: 0;
+  list-style: none;
+  color: var(--DarkBlue);
+  flex-direction: column;
+  background-color: var(--white);
+  box-shadow: 0px 3px 10px var(--gray);
+  width: 100%;
+  gap: 15px;
+  border-radius: 10px;
+  padding: 20px;
+  display: none; /* مخفية إلى أن يُفعلها checkbox */
+}
+.nav-links li:hover {
+  background-color: #d2d7db;
+}
+.nav-links > li {
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+/* عند تفعيل checkbox#menu-toggle تظهر القائمة */
+#menu-toggle:checked ~ .nav-links {
+  display: flex;
+}
+
+/* العناصر الإضافية (مثل أيقونات أو أزرار في الهيدر) */
+.item3 {
+  display: flex;
+  gap: 25px;
+  width: 20%;
+  padding-left: 10px;
+  padding-right: 8px;
+  font-size: 20px;
+  color: var(--DarkBlue);
+  justify-content: end;
+}
+
+/****************************************************/
+/*          4) ميديا كويري للقائمة (الهيدر)         */
+/****************************************************/
+/* شاشات بين 769px و1024px (تابلت أفقي مثلاً) */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .Parent {
+    width: 100%;
+  }
+  .item2 {
+    display: none; /* تُخفى القائمة العادية */
+  }
+  .item2t {
+    display: flex; /* تظهر أيقونة الفتح */
+  }
+}
+
+/* شاشات أصغر من 768px (موبايل) */
+@media screen and (max-width: 768px) {
+  .Parent {
+    width: 100%;
+    height: 200px;
+  }
+  .item1 {
+    width: 30%;
+  }
+  .item1 img {
+    width: 100%;
+    height: 100%;
+  }
+  .item2 {
+    display: none;
+    visibility: hidden;
+  }
+  .item2t {
+    font-size: 60px;
+    width: 65%;
+    display: flex;
+  }
+  .item3 {
+    display: none;
+    width: 0;
+  }
+  .nav-links {
+    top: 180px;
+    font-size: 23px;
+  }
+}
+
+/****************************************************/
+/*        5) قسم العنوان الرئيسي أو Header Text     */
+/****************************************************/
+.header-section {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.hover-text {
+  color: #5a6674;
+  transition: color 0.3s ease-in-out;
+}
+.hover-text:hover {
+  color: black;
+}
+
+.us-text {
+  color: #001d3d;
+}
+
+.underline {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px auto;
+  gap: 10px;
+}
+.dot {
+  font-size: 24px;
+  color: #5a6674;
+}
+.line {
+  width: 80px;
+  height: 4px;
+  background-color: #5a6674;
+}
+
+/****************************************************/
+/*          6) نموذج التواصل (Contact Form)         */
+/****************************************************/
+.container {
+  display: flex;
+  width: 80%;
+  max-width: 1000px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+  margin-top: 40px;
+}
+
+.contact-form {
+  background-color: #fff;
+  padding: 40px;
+  flex: 1;
+  border-radius: 15px;
+  color: #001d3d; /* نص داكن */
+}
+.contact-form h2 {
+  font-size: 24px;
+}
+.contact-form p {
+  color: #919598;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+.contact-form button {
+  background-color: #5a6674;
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.contact-form button:hover {
+  background-color: #767779;
+}
+
+/* معلومات التواصل الجانبية */
+.contact-info {
+  background-color: #5a6674;
+  color: #fff;
+  padding: 40px;
+  flex: 1;
+}
+.contact-info h2 {
+  font-size: 24px;
+}
+.contact-info p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #abb3ba;
+}
+
+/* عناصر المعلومات المفصلة */
+.info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.info i {
+  font-size: 24px;
+  background: #fff;
+  color: #788593;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+.info strong {
+  font-size: 18px;
+}
+.info p {
+  font-size: 13px;
+  margin: 5px 0 0;
+  color: #abb3ba;
+}
+
+/* تجاوب */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    width: 90%;
+  }
+}
+
+/****************************************************/
+/*         7) قسم الموقع (Location Section)         */
+/****************************************************/
+.location-section {
+  display: flex; 
+  flex-wrap: wrap; 
+  align-items: flex-start;
+  justify-content: center; 
+  padding: 40px;
+  background-color: #f9fafb;
+}
+
+/* العمود الأول: نص + عنوان + أيقونات */
+.content-container {
+  flex: 1 1 400px; 
+  max-width: 50%; 
+  padding: 20px;
+}
+.content-container h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.content-container p {
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  max-width: 600px;
+}
+
+/* أيقونات التواصل */
+.social-icons {
+  margin-bottom: 1rem;
+}
+.social-icons a {
+  display: inline-block;
+  margin: 0 3px;
+  color: #333;
+  font-size: 0.5rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.social-icons a:hover {
+  color: #007bff;
+}
+
+/* العمود الثاني: الخريطة */
+.map-container {
+  flex: 1 1 400px;
+  max-width: 50%;
+  padding: 20px;
+  box-sizing: border-box;
+  height: 400px;
+  border: 1px solid #ccc;
+}
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* تجاوب قسم الموقع */
+@media (max-width: 768px) {
+  .location-section {
+    flex-direction: column;
+  }
+  .content-container,
+  .map-container {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+/****************************************************/
+/*   8) قسم النشرة الإخبارية (Newsletter Section)   */
+/****************************************************/
+.newsletter-section {
+  position: relative;
+  /* إن لم تستخدم خلفية صورة، أبقِ اللون أدناه */
+  background: #3B4F57; 
+  /* أو ضع صورة: background: url("images/background.jpg") center/cover no-repeat; */
+  height: 300px; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff; /* نص أبيض */
+}
+.overlay {
+  position: absolute;
+  top: 0; right: 0; left: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+.newsletter-content {
+  position: relative; 
+  max-width: 1200px;
+  width: 100%;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.newsletter-left {
+  flex: 1 1 300px;
+  min-width: 280px;
+}
+.newsletter-left h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+.newsletter-left p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #d0d7de; 
+  max-width: 400px;
+}
+.newsletter-right {
+  flex: 1 1 250px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+  min-width: 250px;
+}
+.newsletter-right input[type="email"] {
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  outline: none;
+  width: 180px;
+  color: #333;
+}
+.newsletter-right button {
+  padding: 10px 20px;
+  background: #3B4F57;
+  border: 1px solid #fff;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.newsletter-right button:hover {
+  background: #2F3C49;
+}
+
+/****************************************************/
+/*               9) تذييل الصفحة (Footer)           */
+/****************************************************/
+.footer-section {
+  background: #3B4F57; 
+  padding: 40px 20px 20px 20px; 
+  color: #fff;
+}
+/* الجزء العلوي من التذييل (الأعمدة) */
+.footer-top {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: space-between;
+}
+.footer-col {
+  flex: 1 1 200px;
+  min-width: 200px;
+}
+.footer-logo h3 {
+  font-size: 1.4rem;
+  line-height: 1.2;
+  margin-bottom: 5px;
+}
+.footer-logo span {
+  font-size: 0.85rem;
+  color: #ccc;
+}
+/* النص في العمود الأول */
+.footer-col-1 p {
+  margin: 10px 0;
+  color: #ccc;
+  line-height: 1.5;
+  max-width: 250px;
+}
+/* عناوين الأعمدة */
+.footer-col h4 {
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+  color: #fff;
+}
+/* قوائم الروابط */
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+.footer-col ul li {
+  margin-bottom: 8px;
+}
+.footer-col ul li a {
+  text-decoration: none;
+  color: #ccc;
+  transition: color 0.3s;
+}
+.footer-col ul li a:hover {
+  color: #fff;
+}
+
+img{
+  width:20px ;
+  height: 20px;
+
+}
+
+.logo{
+  width: 60px;
+  height: 50px;
+}
+
+
+
+/* زر الاتصال */
+.call-us-btn {
+  background: #3B4F57;
+  border: 1px solid #fff;
+  border-radius: 4px;
+  color: #fff;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.call-us-btn:hover {
+  background: #2F3C49;
+}
+/* الجزء السفلي من التذييل (حقوق النشر) */
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  color: #ccc;
+  font-size: 0.9rem;
+}
+
+/* تصميم متجاوب للتذييل */
+@media (max-width: 768px) {
+  .footer-top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .footer-col {
+    max-width: 100%;
+  }
+  .footer-col-1 p {
+    max-width: 100%;
+  }
+  .newsletter-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .newsletter-right {
+    justify-content: flex-start;
+    margin-top: 20px;
+  }
+}
